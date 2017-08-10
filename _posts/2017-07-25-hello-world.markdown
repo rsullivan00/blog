@@ -14,7 +14,7 @@ thoughts with direct takeaways, I am going to document them on this blog.
 This will be mostly for my own benefit, but I am making this public to keep
 myself accountable. So, to start with a huge cliche:
 
-{% highlight ruby %}
+```ruby
 puts 'Hello, world!'
 #=> 'Hello, world!'
-{% endhighlight %}
+```
