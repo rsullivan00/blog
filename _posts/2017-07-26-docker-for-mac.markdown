@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A word of warning about Docker for Mac"
-date:   2017-07-26 21:53:36 -0700
+date:   2017-08-10 21:53:36 -0700
 categories: docker mac osx macos vm virtualization docker-compose
 ---
 
