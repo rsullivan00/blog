@@ -5,7 +5,7 @@ date:   2017-07-26 21:53:36 -0700
 categories: docker mac osx macos vm virtualization docker-compose
 ---
 
-I've recently taken up a bit of a Docker crusade at work.
+I've recently gone on a Docker crusade at work.
 
 Because our office develops applications in multiple languages across various
 platforms, we have developers from .NET backgrounds using Windows machines, and
@@ -15,9 +15,9 @@ In order to allow developers from any platform to contribute, I have been
 Dockerizing our applications. Docker provides our cross-platform team two main
 benefits:
 - Environment standardization
-  - Both Windows and MacOS hosts can use the same Docker VM, meaning all
+  - Both Windows and MacOS hosts can use the same Docker image, meaning all
     dependencies and configurations can be identical across environments
-  - Easy docker setup with `docker-compose` reduces overhead for onboarding new
+  - Easy app setup with `docker-compose` reduces overhead for onboarding new
     team members
 - Application isolation
   - Developers need to run multiple applications simultaneously. With Docker,
@@ -48,7 +48,7 @@ App B | 19.5s | 16.6s | 16.5s | 11.1s | 6.7s
 
 You can see that the recent Docker changes *do* increase performance, but even
 Docker with no file syncing (the "No Volume" column) takes about twice as long
-to execute tests.
+to execute tests when compared to native execution in OSX.
 
 ### SSH Key Management
 
@@ -94,9 +94,19 @@ not use this approach if you will share you Docker images.
 
 ### Unfreeable Disk Usage
 
-### Takeaway
+Each time you rebuild a docker container, Docker allocates memory for a
+`docker.qcow2` file. Unfortunately, [Docker for Mac does not free memory when
+you delete containers and images](https://github.com/docker/for-mac/issues/371).
+
+My `docker.qcow2` file grow to over 60GB before I ran out of space and decided
+to delete the whole file and recreate my containers.
+
+### Next steps
 
 While Docker has many benefits, Docker for Mac's slowness is a huge killer of
 developer productivity. For some less I/O intensive applications, Docker for Mac
 may still be a valid option, but it is not the universal virtualization solution
 I had hoped it would be.
+
+My coworkers and I are currently evaluating alternatives. We are currently
+exploring the performance of Docker on Windows 10 and Ubuntu 16.04.
