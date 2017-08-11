@@ -16,8 +16,8 @@
 title: Rick Learns to Adult
 email: rick@ricksullivan.net
 description: > # this means to ignore newlines until "baseurl:"
-  A software engineer's thoughts on tech and web dev, because the
-  world needs yet another blog.
+  A software engineer's thoughts on web development and being an adult, because
+  the world needs yet another blog.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://ricksullivan.net" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
