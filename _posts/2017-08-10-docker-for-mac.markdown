@@ -36,8 +36,6 @@ development experience to range from a 2x slowdown to a completely unusable
 Docker on Mac has [documented issues with slow reads and writes on mounted
 volumes](https://github.com/docker/for-mac/issues/77).
 
-### TODO: Add more details about slow IO
-
 Running tests should be a generally I/O-light task. In two Rails applications,
 test execution time varies as follows:
 
