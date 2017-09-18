@@ -65,7 +65,7 @@ adding the key and ssh configuration to the container at build time.
 - Add a `docker/` directory to your application
 - Add any necessary ssh configuration to `docker/ssh_config`:
 
-```
+```config
 # docker/ssh_config
 # Add any convenience SSH configuration
 Host staging
@@ -79,7 +79,7 @@ IdentityFile /root/.ssh/id_rsa
 - Copy your `~/.ssh/id_rsa` to `docker/id_rsa`
 - Build your container with the following additions to your Dockerfile:
 
-```docker
+```config
 # Dockerfile
 RUN mkdir -p /root/.ssh
 ADD docker/ssh_config /root/.ssh/config
