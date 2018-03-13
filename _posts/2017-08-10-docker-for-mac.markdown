@@ -31,12 +31,15 @@ some issues that any new adopters should be aware of.
 With any virtualization, we expect to see some amount of slowdown. On Docker for
 Mac, however, issues with I/O and slow application execution can cause the
 development experience to range from a 2x slowdown to a completely unusable
-100x or more slowdown, when used with some build tools.
+100x or more slowdown when used with some build tools.
 
 Docker on Mac has [documented issues with slow reads and writes on mounted
-volumes](https://github.com/docker/for-mac/issues/77).
+volumes](https://github.com/docker/for-mac/issues/77). Running I/O-heavy
+tools, such as EmberJS's Broccoli build tool, on Docker for Mac has been nearly
+unusable from my experience.
 
-Running tests should be a generally I/O-light task. In two Rails applications,
+The slowness isn't just limited to I/O, however. Running tests should be a
+generally I/O-light task, yet in two Rails applications,
 test execution time varies as follows:
 
 &nbsp; | Default Volume | Cached Volume | Delegated Volume | No Volume | Native Execution
@@ -44,7 +47,7 @@ test execution time varies as follows:
 App A | 74.6s | 57.8s | 59.1s | 36.9s | 18.5s
 App B | 19.5s | 16.6s | 16.5s | 11.1s | 6.7s
 
-You can see that the recent Docker changes *do* increase performance, but even
+The Docker team has been working on adding more types of file syncing. You can see that the recent Docker changes *do* increase performance, but even
 Docker with no file syncing (the "No Volume" column) takes about twice as long
 to execute tests when compared to native execution in OSX.
 
@@ -96,8 +99,8 @@ Each time you rebuild a docker container, Docker allocates memory for a
 `docker.qcow2` file. Unfortunately, [Docker for Mac does not free memory when
 you delete containers and images](https://github.com/docker/for-mac/issues/371).
 
-My `docker.qcow2` file grow to over 60GB before I ran out of space and decided
-to delete the whole file and recreate my containers.
+My `docker.qcow2` file grows to over 60GB. There is no way to slim down this
+file--deleting images does not actually free the space on disk.
 
 ### Next steps
 
