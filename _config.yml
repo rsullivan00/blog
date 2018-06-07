@@ -25,6 +25,9 @@ github_username:  rsullivan00
 
 # Build settings
 markdown: kramdown
+kramdown:
+  auto_ids: true
+
 theme: minima
 
 sass:

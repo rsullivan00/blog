@@ -53,6 +53,8 @@ And add a basic `Guardian` module:
 ```elixir
 # my_app/guardian.ex
 defmodule MyApp.Guardian do
+  alias MyApp.Mailer
+
   @impl
   def deliver_magic_link(user, magic_token, _params) do
     user
@@ -62,4 +64,54 @@ defmodule MyApp.Guardian do
 end
 ```
 
+Add a mailer implementation (I like using [`Bamboo`](https://github.com/thoughtbot/bamboo)):
 
+```elixir
+# my_app/mailer.ex
+defmodule MyApp.Mailer do
+  use Bamboo.Mailer, otp_app: :my_app
+  alias MyAppWeb.Emails
+
+  def magic_link_email(user, magic_token) do
+    Emails.magic_link(user, magic_token)
+  end
+end
+```
+
+Put your email contents together in your `Emails` module:
+
+```elixir
+# my_app_web/emails.ex
+defmodule MyAppWeb.Emails do
+  import Bamboo.Email
+
+  @from "no-reply@myapp.com"
+
+  def magic_link(user, magic_token) do
+    body = "Your magic link: https://myapp.com/magic?token=#{magic_token}"
+    new_email()
+    |> from(@from)
+    |> to(user.email)
+    |> subject("Your magic link ✨")
+    |> html_body(body)
+    |> text_body(body)
+  end
+```
+
+And that's it!
+
+Now, on your login page, when a user want to login, call
+
+```elixir
+MyApp.Guardian.send_magic_link(user)
+```
+
+To send the magic link. On your `/magic` route, then exchange the short-lived
+magic token for a longer-lived access token with
+
+```
+case MyApp.Guardian.exchange_magic(magic) do
+  {:ok, token, _} -> {:ok, %{token: token}}
+  error -> error
+end
+```
