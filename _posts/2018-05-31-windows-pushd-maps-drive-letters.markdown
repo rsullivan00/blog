@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Windows `pushd` on network paths"
-date:   2017-08-10 21:53:36 -0700
+date:   2018-05-31
 categories: windows pushd popd unc network *nix
 ---
 
