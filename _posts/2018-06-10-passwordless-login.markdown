@@ -13,8 +13,8 @@ support: here's how you can securely support that flow in a Phoenix app.
 ## Why Passwordless?
 
 Passwordless logins with emails are typically as, or more, secure than 
-password-based authentication with email resets enabled, and is sufficiently
-secure for most web apps. They also make login extremely simple for the user, and
+password-based authentication with email resets enabled, and are sufficiently
+secure for most web apps. They make login extremely simple for the user, and
 you no longer have to worry about securely handling passwords.
 
 If you are handling things like financial or medical data, you may want to consider a multi-factor
