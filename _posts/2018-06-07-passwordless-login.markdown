@@ -7,7 +7,7 @@ categories: elixir phoenix login security passwords
 
 
 Maybe you've seen the slick "Magic Link" login that Slack and other apps now
-support: here's how you can securely support that flow in a Phoenix app.
+support: here's how you can support that flow in a Phoenix app.
 
 
 ## Why Passwordless?
