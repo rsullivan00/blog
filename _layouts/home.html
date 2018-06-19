@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div class="left-column">
+    {% assign about_short = site.pages | where:"name", "about_short.md"  | first %}
+    {% assign about = site.pages | where:"name", "about.md"  | first %}
+    <h1><a href="{{ about.url | relative_url }}">About</a></h1>
+    {{ about_short.content }}
+
+    <hr />
+
+    <h1>Articles</h1>
+    <ul>
+      {% for post in site.posts %}
+      <li>
+        {% assign date_format = "%b %-d, %Y" %}
+        <h3>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {{ post.excerpt }}
+        <span>{{ post.date | date: date_format }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="right-column">
+    <h1>Photos</h1>
+    <ul>
+      {% for photo in site.photos %}
+        <img src="{{ photo }}">
+      {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+@mixin headings {
+  h1, h2, h3,
+  h4, h5, h6 {
+    @content;
+  }
+}
+
+@include headings {
+  font-weight: 400;
+  color: black;
+  font-family: helvetica, arial, geneva, sans-serif;
+
+  a {
+    color: black;
+    border-bottom: none;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: -6px;
+  line-height: 1em;
+  margin: 30px 0;
+}
+
