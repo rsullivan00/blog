@@ -1,7 +1,10 @@
+$font-size-m: 16px;
+$font-size-sm: 14px;
+
 body {
   font-family: cardo, georgia, serif;
   color: #303030;
-  font-size: 21px;
+  font-size: $font-size-m;
   line-height: 1.7;
   text-rendering: optimizeLegibility;
 }
