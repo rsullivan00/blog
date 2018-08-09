@@ -195,12 +195,20 @@ When your topic and subscriptions are created, you will receive an email or SMS
 message from AWS asking you to confirm your subscription to the
 notification topic.
 
-![Subscription Confirmation](/assets/subscription_confirmation.png)
+{%
+  include figure.html
+  url="/assets/subscription_confirmation.png"
+  caption="SNS automatically sends a subscription confirmation message"
+%}
 
 Confirm your subscription, and any form submissions will send you a notification
 with the form contents.
 
-![Contact Form Submission](/assets/submitted_contact_form.png)
+{%
+  include figure.html
+  url="/assets/submitted_contact_form.png"
+  caption="Submitted forms will be distributed to all subscribers"
+%}
 
 Not pretty, but perfect for internal notifications, especially since subscriptions
 are automatically managed for you! You form handler can also be extended with
