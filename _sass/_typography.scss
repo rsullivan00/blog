@@ -1,11 +1,19 @@
+$font-size-xxl: 102px;
 $font-size-m: 16px;
 $font-size-sm: 14px;
 
+$font-family-default: cardo, georgia, serif;
+$font-family-alternate: helvetica, arial, geneva, sans-serif;
+
 body {
-  font-family: cardo, georgia, serif;
+  font-family: $font-family-default;
   font-weight: 400;
   color: #303030;
   font-size: $font-size-m;
   line-height: 1.7;
   text-rendering: optimizeLegibility;
+}
+
+p {
+  margin: 20px 0;
 }

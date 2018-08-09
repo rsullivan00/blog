@@ -8,7 +8,7 @@
 @include headings {
   font-weight: 400;
   color: black;
-  font-family: helvetica, arial, geneva, sans-serif;
+  font-family: $font-family-alternate;
 
   a {
     color: black;

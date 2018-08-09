@@ -1,0 +1,39 @@
+// TODO: Make this a partial
+.color-sidebar {
+  background-image: linear-gradient(to bottom, $primary 0%, transparent 100%);
+  overflow: hidden;
+  width: 10px;
+  min-width: 10px;
+}
+
+.nav {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 150px;
+  width: 100px;
+  min-width: 100px;
+}
+
+.post {
+   max-width: 680px;
+
+  .title {
+    font-size: $font-size-xxl;
+    letter-spacing: -6px;
+    line-height: 1em;
+    margin: 20px 0 30px 0;
+  }
+
+  .content {
+    > p:first-of-type {
+      &::first-letter {
+        float: left;
+        font-family: $font-family-alternate;
+        font-size: $font-size-xxl;
+        line-height: 0.7em;
+        margin: 5px 10px 0 0;
+      }
+      @include clearfix-after;
+    }
+  }
+}
