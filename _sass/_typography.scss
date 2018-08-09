@@ -4,6 +4,7 @@ $font-size-sm: 14px;
 
 $font-family-default: cardo, georgia, serif;
 $font-family-alternate: helvetica, arial, geneva, sans-serif;
+$font-family-monospaced: Monaco, "Lucida Console", "Bitstream Vera Sans Mono", Courier, monospace;
 
 body {
   font-family: $font-family-default;
@@ -16,4 +17,19 @@ body {
 
 p {
   margin: 20px 0;
+}
+
+pre {
+  background: $background-light;
+  font-family: $font-family-monospaced;
+  font-size: $font-size-sm;
+  line-height: 1.4em;
+  overflow: visible;
+  padding: 25px;
+  width: 600px;
+
+  code {
+    display: block;
+    overflow-x: auto;
+  }
 }
