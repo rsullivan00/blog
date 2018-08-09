@@ -35,5 +35,9 @@
       }
       @include clearfix-after;
     }
+    img {
+      overflow: visible;
+      max-width: 650px;
+    }
   }
 }

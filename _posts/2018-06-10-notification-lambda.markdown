@@ -17,8 +17,11 @@ In short, we want:
 To keep this simple and cheap, we will use the [Serverless](https://serverless.com/) 
 framework to build out the infrastructure on Amazon's Web Services.
 
-![Serverless Architecture Diagram](/assets/serverless_notification.svg)
-_The architecture of our form handler_
+{%
+  include figure.html
+  url="/assets/serverless_notification.svg"
+  caption="The architecture of our form handler"
+%}
 
 ## Creating the Serverless Infrastructure
 

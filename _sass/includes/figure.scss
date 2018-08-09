@@ -1,0 +1,27 @@
+figure {
+  max-width: 100%;
+  overflow: visible;
+  margin: 40px 0;
+  position: relative;
+
+  img {
+    overflow: visible;
+    max-width: 650px;
+  }
+
+  > a {
+    border-bottom: none;
+  }
+}
+
+figcaption {
+  font-size: $font-size-sm;
+  font-style: italic;
+  line-height: 1.5em;
+  padding: 12px 0 0 0;
+  position: absolute;
+  top: 0;
+  text-align: right;
+  left: -120px;
+  width: 100px;
+}
