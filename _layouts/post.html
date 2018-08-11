@@ -11,6 +11,11 @@ layout: default
     </header>
     <hr />
     <section class='content'>
+      <div class='toc'>
+        <div class='toc-heading'>Contents</div>
+        {% include toc.html html=page.content ordered=true %}
+        <hr />
+      </div>
       {{ page.content }}
     <section>
   </article>

@@ -14,6 +14,35 @@
   min-width: 100px;
 }
 
+.toc {
+  float: right;
+  font-family: $font-family-alternate;
+  font-size: 0.8rem;
+  line-height: 1.5em;
+  margin: 0 0 0 30px;
+  width: 200px;
+
+  .toc-heading {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  ol, li {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-left: 16px;
+    padding-left: 10px;
+  }
+
+  > ol {
+    list-style-type: decimal;
+    margin: 5px 0;
+    padding: 0;
+  }
+
+}
+
+
 .post {
    max-width: 680px;
 
@@ -33,11 +62,6 @@
         line-height: 0.7em;
         margin: 5px 10px 0 0;
       }
-      @include clearfix-after;
-    }
-    img {
-      overflow: visible;
-      max-width: 650px;
     }
   }
 }

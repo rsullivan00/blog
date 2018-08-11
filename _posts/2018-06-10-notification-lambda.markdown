@@ -5,7 +5,9 @@ date:   2018-06-09
 categories: notifications aws lambda
 ---
 
-Want to add a contact form to your simple static site? Here's how.
+Want to add a contact form to your simple static site? Here's how to do it with
+near-zero costs, easy setup, and easy teardown if you want to build out a full 
+backend.
 
 ## Architecture
 
