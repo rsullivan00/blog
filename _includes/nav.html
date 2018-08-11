@@ -1,0 +1,11 @@
+{% assign about = site.pages | where:"name", "about.md"  | first %}
+<nav class='nav'>
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="{{ about.url | relative_url }}">About</a>
+    </li>
+  </ul>
+</nav>

@@ -4,7 +4,15 @@ layout: default
 
 <div class='container'>
   <div class='color-sidebar'></div>
-  <div class='nav'></div>
+  <div class='nav-sidebar'>
+    <div class='nav-sidebar-inner'>
+      {% include nav.html %}
+      <hr />
+      <div class='publishing-info'>
+        <em><strong>{{ page.title }}</strong> was written on <strong>{{ page.date | date_to_string }}</strong></em>
+      </div>
+    </div>
+  </div>
   <article class='post'>
     <header>
       <h1 class='title'>{{ page.title }}</h1>
