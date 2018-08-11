@@ -19,11 +19,16 @@ p {
   margin: 20px 0;
 }
 
-pre {
+.highlighter-rouge {
   background: $background-light;
   font-family: $font-family-monospaced;
   font-size: $font-size-sm;
   line-height: 1.4em;
+  padding: 5px;
+}
+
+pre {
+  @extend .highlighter-rouge;
   overflow: visible;
   padding: 25px;
   width: 600px;
