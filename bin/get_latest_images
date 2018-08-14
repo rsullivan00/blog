@@ -1,0 +1,3 @@
+#! /bin/bash
+
+source .env && bundle exec ruby get_images.rb

@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/hanklords/flickraw.git
+  revision: 6bf254681f8d57e65b352d93fb49237bd178e695
+  specs:
+    flickraw (1.0.0.pre.pre1)
+      nokogiri
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -242,6 +249,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  flickraw!
   github-pages
   jekyll-feed (~> 0.6)
   tzinfo-data
