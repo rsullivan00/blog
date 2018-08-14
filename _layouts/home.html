@@ -30,9 +30,14 @@ layout: default
 
   <div class="right-column">
     <h1>Photos</h1>
-    <ul>
-      {% for photo in site.photos %}
-        <img src="{{ photo }}">
+    <ul class="photo-list">
+      {% assign selected_photos = site.photos | slice: 0,10 %}
+      {% for photo in selected_photos %}
+        <li>
+          <a href="{{ photo }}">
+            <img src="{{ photo }}">
+          </a>
+        </li>
       {% endfor %}
     </ul>
   </div>

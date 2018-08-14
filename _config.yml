@@ -28,10 +28,14 @@ markdown: kramdown
 kramdown:
   auto_ids: true
 
-theme: minima
-
 sass:
   sass_dir: _sass
+  style: compact
+
+permalink: /posts/:title
+
+photos:
+  - https://upload.wikimedia.org/wikipedia/commons/5/53/Wikipedia-logo-en-big.png
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

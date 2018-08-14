@@ -6,8 +6,8 @@ categories: notifications aws lambda
 ---
 
 Want to add a contact form to your simple static site? Here's how to do it with
-near-zero costs, easy setup, and easy teardown if you want to build out a full 
-backend.
+near-zero costs, easy setup, and easy teardown if you want to replace the backend
+with your own server-based application.
 
 ## Architecture
 
