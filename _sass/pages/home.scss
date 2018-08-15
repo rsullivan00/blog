@@ -6,7 +6,12 @@
     [row1-start] "about-articles" [row1-end]
     [row2-start] "photos" [row2-end]
     / 100%;
-  @media(min-width: 1850px) {
+  @include tablet-up {
+    grid-template:
+      [row1-start] "about-articles _ photos" [row1-end]
+      / 400px 50px 510px;
+  }
+  @include desktop-up {
     grid-template:
       [row1-start] "about-articles _ photos" [row1-end]
       / 400px 50px 1020px;
@@ -34,15 +39,14 @@
     display: flex;
     flex-wrap: wrap;
     a {
-      @media(min-width: 1850px) {
+      @include tablet-up {
         margin: 5px;
-        display: block;
       }
       border: 0;
     }
     img {
       width: 100%;
-      @media(min-width: 1850px) {
+      @include tablet-up {
         width: 500px;
       }
     }
