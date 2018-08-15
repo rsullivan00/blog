@@ -3,11 +3,10 @@ layout: default
 ---
 
 <div class="home">
-  <div class="left-column">
+  <div class="about-articles">
     {% assign about_short = site.pages | where:"name", "about_short.md"  | first %}
-    {% assign about = site.pages | where:"name", "about.md"  | first %}
     <h1>About</h1>
-    {{ about_short.content }}
+    {{ about_short.content | markdownify }}
 
     <hr />
 
@@ -28,7 +27,7 @@ layout: default
     </ul>
   </div>
 
-  <div class="right-column">
+  <div class="photos">
     <h1>Photos</h1>
     <ul class="photo-list">
       {% assign selected_photos = site.data.photos | slice: 0,10 %}

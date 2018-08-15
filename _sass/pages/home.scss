@@ -1,7 +1,15 @@
 .home {
-  display: flex;
-  flex-direction: row;
+  display: grid;
   justify-content: center;
+  grid-template:
+    [row1-start] "about-articles" [row1-end]
+    [row2-start] "photos" [row2-end]
+    / 100%;
+  @media(min-width: 1850px) {
+    grid-template:
+      [row1-start] "about-articles _ photos" [row1-end]
+      / 400px 50px 1020px;
+  }
 
   .article-title {
     margin-bottom: 0;
@@ -13,23 +21,21 @@
     font-size: $font-size-sm;
   }
 
-  .left-column {
-    max-width: 400px;
-    flex: 3 1;
+  .about-articles {
+    grid-area: about-articles;
   }
 
-  .right-column {
-    max-width: 1020px;
-    flex: 6 1;
-
-    @media(max-width: 1850px) {
-      max-width: 510px;
-    }
+  .photos {
+    grid-area: photos;
   }
 
   .photo-list {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      border: 0;
+    }
     img {
-      float: left;
       margin: 5px;
       width: 500px;
     }
