@@ -35,7 +35,25 @@ sass:
 permalink: /posts/:title
 
 photos:
-  - https://upload.wikimedia.org/wikipedia/commons/5/53/Wikipedia-logo-en-big.png
+  - m: https://farm2.staticflickr.com/1835/44024967331_ec6e401386.jpg
+    l: https://farm2.staticflickr.com/1835/44024967331_db4a08b26f_k.jpg
+  - m: https://farm2.staticflickr.com/1773/43306116104_395b0e3ae6.jpg
+    l: https://farm2.staticflickr.com/1773/43306116104_4de3b62369_k.jpg
+  - m: https://farm2.staticflickr.com/1792/43118741875_f6097fde8e.jpg
+    l: https://farm2.staticflickr.com/1792/43118741875_b1085cf27b_k.jpg
+  - m: https://farm2.staticflickr.com/1796/30156321418_314e9a2f3f.jpg
+    l: https://farm2.staticflickr.com/1796/30156321418_c3f0481cb4_k.jpg
+  - m: https://farm2.staticflickr.com/1777/43306115254_7c12baca09.jpg
+    l: https://farm2.staticflickr.com/1777/43306115254_606c6078d8_k.jpg
+  - m: https://farm2.staticflickr.com/1793/43118740775_e623241124.jpg
+    l: https://farm2.staticflickr.com/1793/43118740775_26b8b5fae6_k.jpg
+  - m: https://farm2.staticflickr.com/1776/43306113524_bf184e4678.jpg
+    l: https://farm2.staticflickr.com/1776/43306113524_3fca6dd813_k.jpg
+  - m: https://farm2.staticflickr.com/1818/30156319778_f31817b2e9.jpg
+    l: https://farm2.staticflickr.com/1818/30156319778_1365b5234c_k.jpg
+  - m: https://farm2.staticflickr.com/1778/30156319738_da001734e8.jpg
+    l: https://farm2.staticflickr.com/1778/30156319738_19a80726b6_k.jpg
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

@@ -34,8 +34,8 @@ layout: default
       {% assign selected_photos = site.photos | slice: 0,10 %}
       {% for photo in selected_photos %}
         <li>
-          <a href="{{ photo }}">
-            <img src="{{ photo }}">
+          <a href="{{ photo.l }}">
+            <img src="{{ photo.m }}">
           </a>
         </li>
       {% endfor %}

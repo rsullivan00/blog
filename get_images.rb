@@ -1,10 +1,8 @@
 require 'flickraw'
 
-flickr = FlickRaw::Flickr.new
-for photo in flickr.photos.getRecent(owner_name: "158890375@N08")
-  info = flickr.photos.getInfo(
-    photo_id: photo.id,
-    secret: photo.secret
-  )
-  puts "- #{FlickRaw.url(info)}"
+FlickRaw::Flickr.new.people.getPublicPhotos(
+  user_id: "158890375@N08",
+  extras: 'url_m, url_k'
+).each do |photo|
+  puts "- m: #{photo['url_m']}\n  l: #{photo['url_k']}"
 end

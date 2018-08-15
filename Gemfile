@@ -21,3 +21,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'flickraw', github: 'hanklords/flickraw'
+
+group :development do
+  gem 'pry'
+end
