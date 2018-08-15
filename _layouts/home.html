@@ -6,7 +6,7 @@ layout: default
   <div class="left-column">
     {% assign about_short = site.pages | where:"name", "about_short.md"  | first %}
     {% assign about = site.pages | where:"name", "about.md"  | first %}
-    <h1><a href="{{ about.url | relative_url }}">About</a></h1>
+    <h1>About</h1>
     {{ about_short.content }}
 
     <hr />
