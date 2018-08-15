@@ -5,3 +5,15 @@
     clear: both;
   }
 }
+
+@mixin desktop-up {
+  @media(min-width: 1850px) {
+    @content
+  }
+}
+
+@mixin tablet-up {
+  @media(min-width: 1000px) {
+    @content
+  }
+}
