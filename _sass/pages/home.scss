@@ -1,4 +1,5 @@
 .home {
+  margin: 15px;
   display: grid;
   justify-content: center;
   grid-template:
@@ -33,11 +34,17 @@
     display: flex;
     flex-wrap: wrap;
     a {
+      @media(min-width: 1850px) {
+        margin: 5px;
+        display: block;
+      }
       border: 0;
     }
     img {
-      margin: 5px;
-      width: 500px;
+      width: 100%;
+      @media(min-width: 1850px) {
+        width: 500px;
+      }
     }
   }
 }
