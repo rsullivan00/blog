@@ -9,7 +9,7 @@ layout: default
       {% include nav.html %}
       <hr />
       <div class='publishing-info'>
-        <em><strong>{{ page.title }}</strong> was written on <strong>{{ page.date | date_to_string }}</strong>.</em>
+        <em><strong>{{ page.title }}</strong> was written on <strong>{% include date.html date=page.date %}</strong>.</em>
       </div>
     </div>
   </div>
