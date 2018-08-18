@@ -1,0 +1,27 @@
+- url: https://scribeapi.com
+  name: Scribe
+  description: Scribe is a machine transcription service with GraphQL and REST
+    APIs for easy integration. It supports transcription of many
+    audio/video source types, and provides a dashboard for managing transcripts,
+    API keys, and billing.
+
+- url: https://github.com/Rsullivan00/labelRecognizer
+  name: Label Reader
+  description: A computer vision project that can identify the nutrutional
+    content from a picture of a food's USDA nutrition labels. Completed as my
+    undergraduate these project, which won best-in-session as decided by
+    industry judges.
+
+- url: https://github.com/Rsullivan00/transcript-to-latex
+  name: SCU Transcript
+  description: A Python web application to format web transcripts downloaded from the
+    eCampus website. Web transcripts are plain text documents with whitespace
+    characters for formatting. Students often copy the text into Microsoft word, which mangles
+    the already poor formatting. This app builds and compiles a well-formatted
+    LaTeX pdf document.
+
+- url: https://rsullivan00.github.io/ScheduleSuggester/
+  name: Schedule Suggester
+  description: A Javascript application to builds a custom year schedule for
+    first-year Computer Engineering or Web Design majors at Santa Clara University.
+    Accounts for AP and other credits.

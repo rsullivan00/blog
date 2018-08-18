@@ -20,8 +20,24 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
-        <span class='article-date'>{{ post.date | date: date_format }}</span>
+        <span class='article-date'>{% include date.html date=post.date %}</span>
         {{ post.excerpt }}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <hr />
+
+    <h1>Projects</h1>
+    <ul>
+      {% for project in site.data.projects%}
+      <li>
+        <h3 class='article-title'>
+          <a href="{{ project.url }}">
+            {{ project.name | escape }}
+          </a>
+        </h3>
+        {{ project.description }}
       </li>
       {% endfor %}
     </ul>
