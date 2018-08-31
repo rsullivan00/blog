@@ -55,10 +55,12 @@ building dependencies into the images built with a `Dockerfile`. This process
 allows us to reuse Docker images with exact package versions already installed, 
 but requires rebuilding the image when any package is added or updated. 
 
-In this case, our application dependencies are installed through a single 
-command, either `bundle ` or `mix deps.get`, which must be rerun to build the 
-Docker image. This requires Docker to reinstall _all_ packages from your package
-manager, not just the modified packages.
+In this case, our application dependencies are installed through a single
+command, either `bundle ` or `mix deps.get`, which must be rerun to build the
+Docker image. `Dockerfile`s execute each `RUN` command line by line and caches 
+the filesystem after each line. Docker executes from the previous cached step,
+so it must reinstall _all_ packages from your package manager, not just the
+modified packages.
 
 Alternatively, we can create a persistent volume in Docker Compose to store our
 installed dependencies, but not bake them into the image itself.
