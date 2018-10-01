@@ -44,6 +44,9 @@
     list-style-type: decimal;
     margin: 5px 0;
     padding: 0;
+    ol {
+      list-style-type: lower-latin;
+    }
   }
 
 }
