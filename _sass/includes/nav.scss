@@ -20,3 +20,36 @@
     }
   }
 }
+
+.nav-sidebar {
+  order: 4;
+}
+
+.nav-sidebar-inner {
+  line-height: 1.2em;
+}
+
+@include tablet-up {
+  .nav-sidebar {
+    order: 0;
+    width: 100px;
+    min-width: 100px;
+    margin: 100px 200px 0 40px;
+    text-align: right;
+  }
+
+  .nav-sidebar-inner {
+    top: 50px;
+    position: sticky;
+    width: 100px;
+    padding-right: 2px;
+  }
+}
+
+.color-sidebar {
+  background-image: linear-gradient(to bottom, $primary 0%, transparent 100%);
+  overflow: hidden;
+  width: 10px;
+  min-width: 10px;
+}
+

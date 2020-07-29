@@ -1,0 +1,19 @@
+.nav-sidebar {
+}
+.articles-container {
+  @include tablet-up {
+    max-width: 680px;
+  }
+
+  .article-title {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+
+  .article-date {
+    margin-left: 5px;
+    color: $text-light;
+    font-size: $font-size-sm;
+  }
+}

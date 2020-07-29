@@ -12,7 +12,7 @@ layout: default
 
     <h1>Articles</h1>
     <ul>
-      {% for post in site.posts %}
+      {% for post in site.posts limit: 5 %}
       <li>
         {% assign date_format = "%b %-d, %Y" %}
         <h3 class='article-title'>
@@ -25,6 +25,7 @@ layout: default
       </li>
       {% endfor %}
     </ul>
+    <em><a href="{{ '/articles' | relative_url }}" >more articles</a></em>
 
     <hr />
 

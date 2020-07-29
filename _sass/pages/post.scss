@@ -1,11 +1,3 @@
-// TODO: Make this a partial
-.color-sidebar {
-  background-image: linear-gradient(to bottom, $primary 0%, transparent 100%);
-  overflow: hidden;
-  width: 10px;
-  min-width: 10px;
-}
-
 .post-container {
   display: flex;
   flex-direction: column;

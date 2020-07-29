@@ -26,7 +26,8 @@ As a way to jump straight to interating on the UI, I made a translation layer
 from the JSON API to GraphQL with Apollo, all of which takes place on the client,
 with no changes needed on the server: [Apollo Link JSON API](https://github.com/Rsullivan00/apollo-link-json-api).
 
-### The Good
+
+### Queries
 
 [`apollo-link-json-api`](https://github.com/Rsullivan00/apollo-link-json-api) lets you
 write GraphQL that actually talks to a JSON API service.
@@ -61,9 +62,9 @@ You can try out a demo GraphQL explorer [here](https://optimistic-wozniak-806209
 Or check out the source [here](https://github.com/Rsullivan00/apollo-link-json-api).
 
 
-### The Not-so-Good
+### Mutations
 
-Mutations are unfortunately not quite as magic as querying--you have to interface
+Mutations are not quite as magic as querying--you have to interface
 with the JSON API structure for data inputs, though the translation on the
 response happens as usual.
 
@@ -122,7 +123,8 @@ const UpdateBookTitleButton = ({ bookId }) => (
 
 Apollo Link JSON API currently [doesn't handle HTTP error statuses very well](https://github.com/Rsullivan00/apollo-link-json-api/issues/26)--
 Apollo considers anything that's not 2XX to be a Network Error, which means that
-useful HTTP statuses like `422` are not easily available in the query result.
+useful HTTP statuses like `422` and their error messages are not easily
+available in the query result.
 
 
 This is totally fixable, but I haven't found a great solution yet. PRs are

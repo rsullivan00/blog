@@ -11,7 +11,12 @@
 @import "utils";
 @import "code";
 @import "syntax";
+
+@import "layout";
+
 @import "includes/figure";
 @import "includes/nav";
+
 @import "pages/home";
 @import "pages/post";
+@import "pages/articles";

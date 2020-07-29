@@ -1,0 +1,11 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+
+  @include tablet-up {
+    padding: 0;
+    flex-direction: row;
+  }
+}
+

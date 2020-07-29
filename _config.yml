@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ship Your Software
+title: Rick Sullivan's Blog
 email: rick@ricksullivan.net
 description: > # this means to ignore newlines until "baseurl:"
   A software engineer's thoughts on web development and being an adult, because
