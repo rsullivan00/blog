@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using GraphQL with JSON APIs"
-date:   2020-07-27
+date:   2019-11-27
 categories: graphql jsonapi json javascript apollo
 ---
 
