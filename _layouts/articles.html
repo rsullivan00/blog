@@ -4,17 +4,22 @@ layout: default
 
 <div class='page-container'>
   <div class='color-sidebar'></div>
+  {% assign posts_by_year =
+        site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
   <div class='nav-sidebar'>
     <div class='nav-sidebar-inner'>
       {% include nav.html %}
+      <ul>
+      {% for year in posts_by_year %}
+      <li class='year-navigation'><a class='border-hover' href='#{{ year.name }}'>{{ year.name }}</a></li>
+      {% endfor %}
+      </ul>
     </div>
   </div>
   <main class='articles-container'>
     <h1>Articles</h1>
-    {% assign posts_by_year =
-          site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
     {% for year in posts_by_year %}
-      <h2>{{ year.name }}</h2>
+      <h2 id="{{ year.name }}">{{ year.name }}</h2>
       <ul>
       {% for post in year.items %}
         <li>
