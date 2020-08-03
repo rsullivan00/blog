@@ -14,19 +14,18 @@ additional work to restructure your backend.
 
 In some of our older applications, we have APIs that range from
 do-everything-at-once tangled webs to decently well-structured [JSON API spec](https://jsonapi.org/)
-compliant RESTful APIs. When we decided to experiment with new workflows built on top of
-one of these existing applications, we were torn between two choices:
+compliant RESTful APIs. We wanted to experiment with new workflows built on top of
+one of these existing applications, but also consuming a GraphQL API in a
+separate service. Our broad options for interfacing with the JSON API application
+were:
 
-1. Use GraphQL and get its benefits, but spend time up-front reimplementing
-     convoluted that we already have verified in a JSON API.
-2. Use the existing JSON API, but be stuck with managing resources on the
-     client using something like Redux.
+1. Make a new GraphQL API that reimplements the hardened logic already existing
+  in the JSON API.
+2. Use the existing JSON API, but manage state through something like Redux for
+  JSON API data, while also using Apollo for GraphQL data.
 
-The new features would talk to a new service with a GraphQL API in
-addition to the older application, so were hoping to use Apollo as our single
-source of state management on the client.
-
-As a way to jump straight to interating on the UI, I made a translation layer
+To avoid multiple sources of state management, but also to allow us to quickly
+begin iterating on workflow changes, I instead made a translation layer
 from the JSON API to GraphQL with Apollo, all of which takes place on the client,
 with no changes needed on the server: [Apollo Link JSON API](https://github.com/Rsullivan00/apollo-link-json-api).
 
@@ -217,17 +216,17 @@ If we want to convert that information to a GraphQL tree-structure, we now have
 collisions on the `meta` key, where we would have to make an arbitrary choice
 about which metadata to prefer.
 
-```gql
+```graphql
 query authorsWithMeta {
   authors @jsonapi(path: "authors/1?include=books") {
-    // Is this top-level record count metadata or is it
-    // `author` editable fields metadata?
+    # Is this top-level record count metadata or is it
+    # `author` editable fields metadata?
     meta
     name
     books {
       title
-      // Is this record count metadata for the `books` relationship, or is it
-      // editable fields metadata for the `books` resource?
+      # Is this record count metadata for the `books` relationship, or is it
+      # editable fields metadata for the `books` resource?
       meta
     }
   }
@@ -237,7 +236,7 @@ query authorsWithMeta {
 JSON API Apollo Link instead provides access to a verbose, lossless version of
 the response tree if you add `includeJsonapi: true` to the `@jsonapi` directive.
 
-```gql
+```graphql
 query authorsWithMeta {
   authors @jsonapi(path: "authors/1?include=books", includeJsonapi: true) {
     graphql {
@@ -248,20 +247,20 @@ query authorsWithMeta {
     }
     jsonapi {
       meta {
-        record_count // Authors record count
+        record_count # Authors record count
       }
       data {
         meta {
-          editable // Author editable fields
+          editable # Author editable fields
         }
         relationships {
           books {
             meta {
-              record_count // Books relationship record count
+              record_count # Books relationship record count
             }
             data {
               meta {
-                editable // Book editable fields
+                editable # Book editable fields
               }
             }
           }
@@ -272,7 +271,8 @@ query authorsWithMeta {
 }
 ```
 
-This is also helpful if you make use of JSON API's [`links`](https://jsonapi.org/format/#document-resource-object-links).
+This is also helpful if you make use of [JSON API's `links`](https://jsonapi.org/format/#document-resource-object-links).
+
 
 ## Error Handling
 
