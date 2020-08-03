@@ -3,21 +3,15 @@
   font-family: $font-family-monospaced;
   font-size: $font-size-sm;
   line-height: 1.4em;
-  padding: 4px;
 }
 
 pre {
   @extend .highlighter-rouge;
-  overflow: visible;
-  padding: 15px;
-
-  @include tablet-up {
-    padding: 25px;
-    width: 600px;
-  }
+  width: 100%;
+  overflow-x: auto;
 
   code {
+    padding: 15px;
     display: block;
-    overflow-x: auto;
   }
 }

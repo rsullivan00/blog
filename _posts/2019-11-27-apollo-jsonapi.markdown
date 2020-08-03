@@ -62,8 +62,8 @@ query firstAuthor {
 ```
 
 <!-- TODO: Add more about the JSON -> GraphQL conversion here -->
-This this conversion is possible because JSON API implements some of the ideas of
-GraphQL, though in a RESTful format. Namely, JSON API specifies formats for
+This this conversion is possible because JSON API implements some of the same
+ideas as GraphQL, though in a RESTful format. Namely, JSON API specifies formats for
 resource relationships, and provides an interface to return related resources in
 a single query. Adding the `include` parameter tells the server to return
 resources traversing relationship information.
@@ -105,7 +105,7 @@ resources traversing relationship information.
 }
 ```
 
-Requesting an author, along with the author's books and those books' series
+Requesting an author, along with the author's books and those books' series,
 responds with the above. Notice that included resources are returned in a single,
 flat `included` array. `type` and `id` are used to identify resources and their
 relationships--Apollo Link JSON API uses those identifiers to restructure the
