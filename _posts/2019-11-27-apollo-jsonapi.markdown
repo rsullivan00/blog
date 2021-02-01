@@ -6,7 +6,7 @@ categories: graphql jsonapi json javascript apollo
 ---
 
 
-I've had the pleasure to work with GraphQL in some of our more recently built
+I've had the pleasure of working with GraphQL in some of our more recently built
 applications. Developing frontend applications backed by a GraphQL API
 is the most productive my team and I have ever been. The flexibility provided
 lets you try out a variety of UX solutions to your problem, without any
